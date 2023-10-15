@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health care app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="../static/main.js" defer></script>
+</head>
+<body>
+  <nav class="nav">
+    <ul class="tabs nav-list">
+      <li data-tab="dashboard"><span class="nav-ls-icon material-icons">dashboard</span><span class="nav-ls-text">Health Dashboard</span></li>
+      <li data-tab="calendar"><span class="nav-ls-icon material-icons">calendar_month</span><span class="nav-ls-text">Schedules</span></li>
+      <li data-tab="edu"><span class="nav-ls-icon material-icons">school</span><span class="nav-ls-text">Educational resources</span></li>
+      <li data-tab="healthcare"><span class="nav-ls-icon material-icons">medical_services</span><span class="nav-ls-text">Health care providers</span></li>
+      <li data-tab="sym-check"><span class="nav-ls-icon material-icons">vaccines</span><span class="nav-ls-text">Symptom checker</span></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <section class="tab tab-health-dashboard" data-name="dashboard">
+      <div class="bp"></div>
+      <div class="pulse"></div>
+      <div class="sugar"></div>
+      Upcoming appointments <br>
+      Monthly reports
+    </section>
+
+    <section class="tab tab-schedule" data-name="calendar">
+      <iframe src="{{ url_for('reminder.index') }}" style="border: 0; width: 100%; height: 100%"></iframe>
+    </section>
+
+    <section class="tab tab-edu-resources edu-tab" data-name="edu">
+      <div>
+        <ul class="edu-tab-btns">
+          <li>Videos</li>
+          <li>Exercises</li>
+          <li>Foods</li>
+        </ul>
+
+        <div class="edu-tabs">
+          <div class="edu-tab">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/brjAjq4zEIE?si=MwYGFDf1R2cXnI-F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Eml2xnoLpYE?si=bKEYaeKpzeYZRT8X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NJU8dcCacRY?si=-0BoaNDKv5veANOB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g_tea8ZNk5A?si=j_Gd9ZgjrTQ7hc03" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FdyhENXyIQ4?si=c68_R7uxd5mUsOsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-qkx4CdBMnM?si=4_YD3eAcZKHR9TP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="edu-tab">
+
+          </div>
+          <div class="edu-tab">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab tab-healthcare-providers" data-name="healthcare">
+      Health
+    </section>
+
+    <section class="tab tab-symptom-checker" data-name="sym-check">
+      <div class="chats-container">
+        <div class="chats">
+          <div class="chat bot">Hello! I'm your symptom checker. Please describe your symptoms</div>
+        </div>
+      </div>
+
+      <div class="bot-footer">
+        <input type="text" class="bot-inp">
+        <button class="bot-send"><i class="material-icons">send</i></button>
+      </div>
+    </section>
+  </section>
+</body>
+</html>
